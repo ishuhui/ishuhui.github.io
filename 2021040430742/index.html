@@ -1,0 +1,286 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HTML笔记（1） | 醒醒</title><meta name="keywords" content="HTML"><meta name="author" content="醒醒"><meta name="copyright" content="醒醒"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="相关概念什么是网页网站是指在因特网上根据一定的规则，使用HTML等制作的用于展示特定内容的网页集合。 网页是网站中的一“页”，通常是HTML格式的文件，它通过浏览器来阅读。 网页是构成网站的基本元素，它通常由图片、链接、文字、声音、视频等元素构成。通常我们看到的网页，常见以.htm或.html后缀结尾的文件，因此将其俗称为HTML文件。 什么是HTMLHTML是一种超文本标记语言 (Hyper T">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML笔记（1）">
+<meta property="og:url" content="https://github.com/ishuhui/myblog.git/2021040430742/index.html">
+<meta property="og:site_name" content="醒醒">
+<meta property="og:description" content="相关概念什么是网页网站是指在因特网上根据一定的规则，使用HTML等制作的用于展示特定内容的网页集合。 网页是网站中的一“页”，通常是HTML格式的文件，它通过浏览器来阅读。 网页是构成网站的基本元素，它通常由图片、链接、文字、声音、视频等元素构成。通常我们看到的网页，常见以.htm或.html后缀结尾的文件，因此将其俗称为HTML文件。 什么是HTMLHTML是一种超文本标记语言 (Hyper T">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
+<meta property="article:published_time" content="2021-04-04T04:40:57.000Z">
+<meta property="article:modified_time" content="2022-05-11T09:31:24.000Z">
+<meta property="article:author" content="醒醒">
+<meta property="article:tag" content="HTML">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://github.com/ishuhui/myblog.git/2021040430742/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'HTML笔记（1）',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-05-11 17:31:24'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/hui.css"><meta name="generator" content="Hexo 5.4.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">23</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">17</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章总览</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 自言自语</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于博主</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background: transparent"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">醒醒</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章总览</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 自言自语</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于博主</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">HTML笔记（1）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-04-04T04:40:57.000Z" title="发表于 2021-04-04 12:40:57">2021-04-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-05-11T09:31:24.000Z" title="更新于 2022-05-11 17:31:24">2022-05-11</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="HTML笔记（1）"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="相关概念"><a href="#相关概念" class="headerlink" title="相关概念"></a>相关概念</h2><h3 id="什么是网页"><a href="#什么是网页" class="headerlink" title="什么是网页"></a>什么是网页</h3><p>网站是指在因特网上根据一定的规则，使用HTML等制作的用于展示特定内容的网页集合。</p>
+<p>网页是网站中的一“页”，通常是HTML格式的文件，它通过浏览器来阅读。</p>
+<p>网页是构成网站的基本元素，它通常由图片、链接、文字、声音、视频等元素构成。通常我们看到的网页，常见以.htm或.html后缀结尾的文件，因此将其俗称为HTML文件。</p>
+<h3 id="什么是HTML"><a href="#什么是HTML" class="headerlink" title="什么是HTML"></a>什么是HTML</h3><p>HTML是一种超文本标记语言 (Hyper Text Markup Language)，它是用来描述网页的一种语言。</p>
+<p>HTML<strong>不是</strong>一种编程语言，而是一种标记语言 (markup language)。</p>
+<p>标记语言是一套标记标签 (markup tag)。</p>
+<p><em>超文本的两层含义：</em></p>
+<p><em>（1）它可以加入图片、声音、动画、多媒体等内容（超越了文本限制）。</em></p>
+<p><em>（2）它还可以从一个文件跳转到另一个文件，与世界各地主机的文件连接（超级链接文本）。</em></p>
+<h3 id="Web标准的构成"><a href="#Web标准的构成" class="headerlink" title="Web标准的构成"></a>Web标准的构成</h3><p>主要包括<strong>结构</strong>（Structure）、<strong>表现</strong>（Presentation）和<strong>行为</strong>（Behavior）三个方面。</p>
+<table>
+<thead>
+<tr>
+<th>标准</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>结构</td>
+<td>结构用于对网页元素进行整理和分类，现阶段主要学的是HTML</td>
+</tr>
+<tr>
+<td>表现</td>
+<td>表现用于设置网页元素的版式、颜色、大小等外观样式，主要指的是 CSS</td>
+</tr>
+<tr>
+<td>行为</td>
+<td>行为是指网页模型的定义及交互的编写，现阶段主要学的是 Javascript</td>
+</tr>
+</tbody></table>
+<p>Web 标准提出的最佳体验方案：结构、样式、行为相分离。</p>
+<p><em>简单理解：结构写到 HTML文件中，表现写到 CSS 文件中，行为写到 JavaScript 文件中。</em></p>
+<h2 id="HTML-语法规范"><a href="#HTML-语法规范" class="headerlink" title="HTML 语法规范"></a>HTML 语法规范</h2><h3 id="基本语法概念"><a href="#基本语法概念" class="headerlink" title="基本语法概念"></a>基本语法概念</h3><p>HTML标签是由尖括号包围的关键字，例如 <html></html></p>
+<p>HTML标签通常是成对出现的，例如 <html> 和 </html>，我们称为双标签。标签对中的第一个标签是开始标签，第二个标签是结束标签。</p>
+<p>有些特殊的标签必须是单个标签（极少情况），称为单标签，例如 <br></p>
+<h3 id="标签关系"><a href="#标签关系" class="headerlink" title="标签关系"></a>标签关系</h3><p>标签关系可以分为两类：<strong>包含关系</strong>和<strong>并列关系</strong>。</p>
+<p>包含关系</p>
+<head>
+    <title> </title>
+</head>
+
+
+<p>并列关系</p>
+<head> </head>
+
+<body></body>
+
+<h3 id="第一个HTML网页（骨架标签）"><a href="#第一个HTML网页（骨架标签）" class="headerlink" title="第一个HTML网页（骨架标签）"></a>第一个HTML网页（骨架标签）</h3><p>每一个网页都会有一个基本的结构标签（骨架标签），页面内容也是在这些基本标签上书写的。HTML页面也成为HTML文档。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>这是我的第一个页面<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        我叫***</span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>标签名</th>
+<th>定义</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><html></html></td>
+<td>HTML标签</td>
+<td>页面中最大的标签，我们称为根标签</td>
+</tr>
+<tr>
+<td><head></head></td>
+<td>文档的头部</td>
+<td>注意在head标签中我们必须要设置的标签是title</td>
+</tr>
+<tr>
+<td><title></title></td>
+<td>文档的标题</td>
+<td>让页面拥有一个属于自己的网页标签</td>
+</tr>
+<tr>
+<td><body></body></td>
+<td>文档的主体</td>
+<td>元素包含文档的所有内容，页面内容基本都是放到body里面的</td>
+</tr>
+</tbody></table>
+<h3 id="自动生成的三行代码的作用"><a href="#自动生成的三行代码的作用" class="headerlink" title="自动生成的三行代码的作用"></a>自动生成的三行代码的作用</h3><table>
+<thead>
+<tr>
+<th>代码</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><!DOCTYPE html></td>
+<td>文档类型声明标签，告诉浏览器这个页面采用html5版本来显示页面</td>
+</tr>
+<tr>
+<td><html lang="en"></html></td>
+<td>告诉浏览器或者搜素引擎这是一个英文网站，本页面采用英文来显示</td>
+</tr>
+<tr>
+<td><meta charset="UTF-8"></td>
+<td>必须写采取UTF-8来保存文字，如果不写就会乱码</td>
+</tr>
+</tbody></table>
+<h2 id="Visual-Studio-Code工具"><a href="#Visual-Studio-Code工具" class="headerlink" title="Visual Studio Code工具"></a>Visual Studio Code工具</h2><h3 id="VS-Code中推荐安装的插件"><a href="#VS-Code中推荐安装的插件" class="headerlink" title="VS Code中推荐安装的插件"></a>VS Code中推荐安装的插件</h3><table>
+<thead>
+<tr>
+<th>插件</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Chinese (Simplified) Language Pack for VS Code</td>
+<td>中文（简体）语言包</td>
+</tr>
+<tr>
+<td>Open in Browser</td>
+<td>右击选择浏览器打开html文件</td>
+</tr>
+<tr>
+<td>Js-CSS-HTML Formatter</td>
+<td>每次保存，都会自动格式化 js css 和 html 代码</td>
+</tr>
+<tr>
+<td>Auto Rename Tag</td>
+<td>自动重命名配对的HTML/XML标签</td>
+</tr>
+<tr>
+<td>CSS Peek</td>
+<td>追踪至样式</td>
+</tr>
+</tbody></table>
+<h3 id="插件安装过程"><a href="#插件安装过程" class="headerlink" title="插件安装过程"></a>插件安装过程</h3><p>![](C:\Users\48755\Pictures\Camera Roll\2020-06-26T14_00_53.png)</p>
+<p>先点击左下角的Extensions，然后在搜索栏中输入要使用的插件（注：输入所需插件的前几个字母即可），点击安装，安装第一个中文语言插件后，一定要重启软件，其它几个可以不重启。</p>
+<h3 id="VS-Code的使用"><a href="#VS-Code的使用" class="headerlink" title="VS Code的使用"></a>VS Code的使用</h3><ol>
+<li>新建文件 （Ctrl + N）。</li>
+<li>保存（Ctrl + s），注意一定要保存为以 .html 结尾的文件。</li>
+<li>Ctrl + 加号键，Ctrl + 减号键，可以放大缩小视图。</li>
+<li>生成页面骨架结构：输入！按下Tab键。</li>
+<li>利用插件在浏览器中预览页面：单击鼠标右键，在弹出窗口中点击”Open In Default Browser”。</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">醒醒</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://github.com/ishuhui/myblog.git/2021040430742/">https://github.com/ishuhui/myblog.git/2021040430742/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://github.com/ishuhui/myblog.git" target="_blank">醒醒</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/HTML/">HTML</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021040415382/"><img class="prev-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">HTML笔记（2）</div></div></a></div><div class="next-post pull-right"><a href="/2021040442694/"><img class="next-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">PHP基础</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2021040415382/" title="HTML笔记（2）"><img class="cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-04-04</div><div class="title">HTML笔记（2）</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">醒醒</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">23</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">17</div></a></div></div><a class="button--animated" id="card-info-btn" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5"><span class="toc-number">1.</span> <span class="toc-text">相关概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E7%BD%91%E9%A1%B5"><span class="toc-number">1.1.</span> <span class="toc-text">什么是网页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFHTML"><span class="toc-number">1.2.</span> <span class="toc-text">什么是HTML</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Web%E6%A0%87%E5%87%86%E7%9A%84%E6%9E%84%E6%88%90"><span class="toc-number">1.3.</span> <span class="toc-text">Web标准的构成</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML-%E8%AF%AD%E6%B3%95%E8%A7%84%E8%8C%83"><span class="toc-number">2.</span> <span class="toc-text">HTML 语法规范</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E6%A6%82%E5%BF%B5"><span class="toc-number">2.1.</span> <span class="toc-text">基本语法概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E7%AD%BE%E5%85%B3%E7%B3%BB"><span class="toc-number">2.2.</span> <span class="toc-text">标签关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E4%B8%AAHTML%E7%BD%91%E9%A1%B5%EF%BC%88%E9%AA%A8%E6%9E%B6%E6%A0%87%E7%AD%BE%EF%BC%89"><span class="toc-number">2.3.</span> <span class="toc-text">第一个HTML网页（骨架标签）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E7%9A%84%E4%B8%89%E8%A1%8C%E4%BB%A3%E7%A0%81%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-number">2.4.</span> <span class="toc-text">自动生成的三行代码的作用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Visual-Studio-Code%E5%B7%A5%E5%85%B7"><span class="toc-number">3.</span> <span class="toc-text">Visual Studio Code工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#VS-Code%E4%B8%AD%E6%8E%A8%E8%8D%90%E5%AE%89%E8%A3%85%E7%9A%84%E6%8F%92%E4%BB%B6"><span class="toc-number">3.1.</span> <span class="toc-text">VS Code中推荐安装的插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B"><span class="toc-number">3.2.</span> <span class="toc-text">插件安装过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#VS-Code%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">3.3.</span> <span class="toc-text">VS Code的使用</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023090537773/" title="测试">测试</a><time datetime="2023-09-05T09:44:26.000Z" title="发表于 2023-09-05 17:44:26">2023-09-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023032643558/" title="yarn冲突问题">yarn冲突问题</a><time datetime="2023-03-25T16:16:49.000Z" title="发表于 2023-03-26 00:16:49">2023-03-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023032417312/" title="node与npm">node与npm</a><time datetime="2023-03-24T08:43:33.000Z" title="发表于 2023-03-24 16:43:33">2023-03-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023032410359/" title="pip简介">pip简介</a><time datetime="2023-03-24T08:34:42.000Z" title="发表于 2023-03-24 16:34:42">2023-03-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/202205147065/" title="Git常用命令">Git常用命令</a><time datetime="2022-05-14T08:34:31.000Z" title="发表于 2022-05-14 16:34:31">2022-05-14</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By 醒醒</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js" async="async" mobile="true"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>

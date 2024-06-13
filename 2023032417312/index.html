@@ -1,0 +1,261 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>node与npm | 醒醒</title><meta name="keywords" content="node,npm"><meta name="author" content="醒醒"><meta name="copyright" content="醒醒"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="npm（Node Package Manager）是Node.js的包管理器，随同NodeJS一起安装的包管理和分发工具，它很方便让JavaScript开发者下载、安装、上传以及管理已经安装的包。   npm由三个独立的部分组成：网站，注册表(registry)，命令行工具(CLI）。  使用该网站来发现包、设置配置文件并管理您的npm体验的其他方面。例如，您可以设置组织来管理对公共或私人包的访">
+<meta property="og:type" content="article">
+<meta property="og:title" content="node与npm">
+<meta property="og:url" content="https://github.com/ishuhui/myblog.git/2023032417312/index.html">
+<meta property="og:site_name" content="醒醒">
+<meta property="og:description" content="npm（Node Package Manager）是Node.js的包管理器，随同NodeJS一起安装的包管理和分发工具，它很方便让JavaScript开发者下载、安装、上传以及管理已经安装的包。   npm由三个独立的部分组成：网站，注册表(registry)，命令行工具(CLI）。  使用该网站来发现包、设置配置文件并管理您的npm体验的其他方面。例如，您可以设置组织来管理对公共或私人包的访">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
+<meta property="article:published_time" content="2023-03-24T08:43:33.000Z">
+<meta property="article:modified_time" content="2023-09-05T09:29:46.620Z">
+<meta property="article:author" content="醒醒">
+<meta property="article:tag" content="node">
+<meta property="article:tag" content="npm">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://github.com/ishuhui/myblog.git/2023032417312/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'node与npm',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-09-05 17:29:46'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/hui.css"><meta name="generator" content="Hexo 5.4.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">23</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">17</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章总览</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 自言自语</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于博主</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background: transparent"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">醒醒</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章总览</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 自言自语</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于博主</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">node与npm</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-03-24T08:43:33.000Z" title="发表于 2023-03-24 16:43:33">2023-03-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-09-05T09:29:46.620Z" title="更新于 2023-09-05 17:29:46">2023-09-05</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="node与npm"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
+<p><code>npm</code>（<code>Node Package Manager</code>）是<code>Node.js</code>的包管理器，随同<code>NodeJS</code>一起安装的包管理和分发工具，它很方便让<code>JavaScript</code>开发者下载、安装、上传以及管理已经安装的包。</p>
+</blockquote>
+<blockquote>
+<p><code>npm</code>由三个独立的部分组成：网站，注册表(<code>registry</code>)，命令行工具(<code>CLI</code>）。</p>
+<ul>
+<li>使用该网站来发现包、设置配置文件并管理您的<code>npm</code>体验的其他方面。例如，您可以设置<a target="_blank" rel="noopener" href="https://node与npm/node%E4%B8%8Enpm/www.npmjs.comnode%E4%B8%8Enpm/features">组织</a>来管理对公共或私人包的访问</li>
+<li><code>CLI</code>从终端运行，是大多数开发人员与<code> npm</code> 交互的方式。</li>
+<li>注册表是<code>JavaScript</code>软件及其周围元信息的大型公共数据库。</li>
+</ul>
+</blockquote>
+<blockquote>
+<p><code>npm</code>是随同<code>NodeJS</code>一起安装的包管理工具，能解决<code>NodeJS</code>代码部署上的很多问题，常见的使用场景有以下几种：</p>
+<ul>
+<li>允许用户从<code>NPM</code>服务器下载别人编写的第三方包到本地使用。</li>
+<li>允许用户从<code>NPM</code>服务器下载并安装别人编写的命令行程序到本地使用。</li>
+<li>允许用户将自己编写的包或命令行程序上传到<code>NPM</code>服务器供别人使用。</li>
+</ul>
+</blockquote>
+<h1 id="卸载Node"><a href="#卸载Node" class="headerlink" title="卸载Node"></a>卸载<code>Node</code></h1><ol>
+<li><p>打开控制面板，卸载<code>Node</code></p>
+</li>
+<li><p>删除<code>Node</code>的安装目录<code>D:\Program Files\nodejs</code></p>
+</li>
+<li><p>查找<code>.npmrc</code>文件是否存在，有就删除(默认在<code>C:\User\用户名</code>下)</p>
+</li>
+<li><p>逐一查看以下文件是否存在，存在就删除</p>
+<ul>
+<li><p><code>C:\Program Files (x86)\[Nodejs</code></p>
+</li>
+<li><p><code>C:\Program Files\Nodejs</code></p>
+</li>
+<li><p><code>C:\Users\用户名\AppData\Roaming\npm</code></p>
+</li>
+<li><p><code>C:\Users\用户名\AppData\Roaming\npm-cache</code></p>
+</li>
+</ul>
+</li>
+<li><p>编辑系统环境变量，将用户变量、系统变量里的node删掉</p>
+</li>
+<li><p>输入<code>node -v</code>查看是否删除成功</p>
+</li>
+</ol>
+<h1 id="安装node"><a href="#安装node" class="headerlink" title="安装node"></a>安装<code>node</code></h1><p>1.去官网下载<code>https://nodejs.cn/download/</code></p>
+<p><img src="/ishuhui/myblog.git/2023032417312/1.png"></p>
+<p>2.双击安装</p>
+<p>3.验证安装</p>
+<p><img src="/ishuhui/myblog.git/2023032417312/2.png"></p>
+<h1 id="修改全局路径"><a href="#修改全局路径" class="headerlink" title="修改全局路径"></a>修改全局路径</h1><p>1.在<code>C:\Program Files\nodejs</code>下新建两个文件夹<code>node_global</code>及<code>node_cache</code></p>
+<p>2.打开命令行输入</p>
+<p><img src="/ishuhui/myblog.git/2023032417312/3.png"></p>
+<ul>
+<li>prefix = 创建的node_global文件夹所在路径</li>
+<li>cache  = 创建的node_cache文件夹所在路径</li>
+</ul>
+<p>3.修改系统环境变量</p>
+<ul>
+<li>打开<strong>用户变量</strong>下的<code>Path</code>，将原本的内容修改为<code>C:\Program Files\nodejs\node_global</code></li>
+</ul>
+<p><img src="/ishuhui/myblog.git/2023032417312/4.png"></p>
+<ul>
+<li>在<strong>系统变量</strong>下新建<code>NODE_PATH</code>，<code>C:\Program Files\nodejs\node_modules</code></li>
+</ul>
+<p><img src="/ishuhui/myblog.git/2023032417312/5.png"></p>
+<ul>
+<li>打开<strong>系统变量</strong>下的<code>Path</code>，新建<code>node</code>全局文件夹<code>C:\Program Files\nodejs\node_global</code></li>
+</ul>
+<p><img src="/ishuhui/myblog.git/2023032417312/6.png"></p>
+<blockquote>
+<p>验证：</p>
+<p>经过上述步骤，<code>nodejs</code>下载的模块就会自动下载到自定义的目录，如输入</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install express -g       # -g是全局安装的意思，不加-g就是默认下载到当前目录</span><br></pre></td></tr></table></figure>
+
+<p>可以在<code>C:\Program Files\nodejs\node_global\node_modules</code>下看到下载成功的<code>express</code></p>
+</blockquote>
+<blockquote>
+<p>注意：若执行<code>npm</code>出现如下报错</p>
+<p><img src="/ishuhui/myblog.git/2023032417312/8.png"></p>
+<p>由于权限原因，选择<code>nodejs</code>文件夹，右键-&gt;属性-&gt;安全，点击编辑，将所有权限都打开即可</p>
+<p><img src="/ishuhui/myblog.git/2023032417312/7.png"></p>
+</blockquote>
+<h1 id="更换npm源为淘宝镜像"><a href="#更换npm源为淘宝镜像" class="headerlink" title="更换npm源为淘宝镜像"></a>更换<code>npm</code>源为淘宝镜像</h1><blockquote>
+<p>说明：</p>
+<p><code>npm</code>默认的<code>registry</code>是国外的服务器，很慢，一般更换国内的</p>
+</blockquote>
+<p>1.查看初始<code>npm</code>源</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config get registry</span><br></pre></td></tr></table></figure>
+
+<p><img src="/ishuhui/myblog.git/2023032417312/9.png"></p>
+<p>2.更换镜像为淘宝镜像</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry https://registry.npm.taobao.org/</span><br></pre></td></tr></table></figure>
+
+<p>3.检查配置是否成功</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config get registry</span><br></pre></td></tr></table></figure>
+
+<p><img src="/ishuhui/myblog.git/2023032417312/10.png"></p>
+<h1 id="全局安装基于淘宝源的cnpm"><a href="#全局安装基于淘宝源的cnpm" class="headerlink" title="全局安装基于淘宝源的cnpm"></a>全局安装基于淘宝源的<code>cnpm</code></h1><blockquote>
+<p><code>npm</code>与<code>cnpm</code>的区别：</p>
+<p><code>npm</code>是<code>node</code>官方的包管理器，<code>cnpm</code>是中国版的<code>npm</code>，是淘宝定制的<code>cnpm</code>命令行工具，代替默认的<code>npm</code></p>
+<p>如果因网络原因无法使用<code>npm</code>下载，那么就可以使用<code>cnpm</code></p>
+<p>一般<code>cnpm</code>只用于安装，所以在项目创建与卸载等相关操作时还是使用<code>npm</code></p>
+</blockquote>
+<p>1.全局安装基于淘宝源的<code>cnpm</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<p>2.下载完成后，我们在本地就能看到<code>cnpm</code>模块</p>
+<p><img src="/ishuhui/myblog.git/2023032417312/11.png"></p>
+<p>3.执行命令<code>cnpm -v</code>查看<code>cnpm</code>是否安装成功</p>
+<p><img src="/ishuhui/myblog.git/2023032417312/12.png"></p>
+<p>如图即配置成功，若遇到报红，可关闭命令行，再重新打开</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">醒醒</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://github.com/ishuhui/myblog.git/2023032417312/">https://github.com/ishuhui/myblog.git/2023032417312/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://github.com/ishuhui/myblog.git" target="_blank">醒醒</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/node/">node</a><a class="post-meta__tags" href="/tags/npm/">npm</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023032643558/"><img class="prev-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">yarn冲突问题</div></div></a></div><div class="next-post pull-right"><a href="/2023032410359/"><img class="next-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">pip简介</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2023032643558/" title="yarn冲突问题"><img class="cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-03-26</div><div class="title">yarn冲突问题</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">醒醒</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">23</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">17</div></a></div></div><a class="button--animated" id="card-info-btn" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%B8%E8%BD%BDNode"><span class="toc-number">1.</span> <span class="toc-text">卸载Node</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85node"><span class="toc-number">2.</span> <span class="toc-text">安装node</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%85%A8%E5%B1%80%E8%B7%AF%E5%BE%84"><span class="toc-number">3.</span> <span class="toc-text">修改全局路径</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9B%B4%E6%8D%A2npm%E6%BA%90%E4%B8%BA%E6%B7%98%E5%AE%9D%E9%95%9C%E5%83%8F"><span class="toc-number">4.</span> <span class="toc-text">更换npm源为淘宝镜像</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%A8%E5%B1%80%E5%AE%89%E8%A3%85%E5%9F%BA%E4%BA%8E%E6%B7%98%E5%AE%9D%E6%BA%90%E7%9A%84cnpm"><span class="toc-number">5.</span> <span class="toc-text">全局安装基于淘宝源的cnpm</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023090537773/" title="测试">测试</a><time datetime="2023-09-05T09:44:26.000Z" title="发表于 2023-09-05 17:44:26">2023-09-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023032643558/" title="yarn冲突问题">yarn冲突问题</a><time datetime="2023-03-25T16:16:49.000Z" title="发表于 2023-03-26 00:16:49">2023-03-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023032417312/" title="node与npm">node与npm</a><time datetime="2023-03-24T08:43:33.000Z" title="发表于 2023-03-24 16:43:33">2023-03-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023032410359/" title="pip简介">pip简介</a><time datetime="2023-03-24T08:34:42.000Z" title="发表于 2023-03-24 16:34:42">2023-03-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/202205147065/" title="Git常用命令">Git常用命令</a><time datetime="2022-05-14T08:34:31.000Z" title="发表于 2022-05-14 16:34:31">2022-05-14</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By 醒醒</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js" async="async" mobile="true"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
