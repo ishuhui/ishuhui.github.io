@@ -19,15 +19,15 @@ jobs:
       #   with:
       #     ref: main #2020年10月后github新建仓库默认分支改为main，注意更改
 
-      # - name: 安装 Node
-      #   uses: actions/setup-node@v1
-      #   with:
-      #     node-version: "18"
+      - name: 安装 Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "18"
 
-      # - name: 安装 Hexo
-      #   run: |
-      #     export TZ='Asia/Shanghai'
-      #     npm install hexo-cli -g
+      - name: 安装 Hexo
+        run: |
+          export TZ='Asia/Shanghai'
+          npm install hexo-cli -g
 
       # - name: 缓存 Hexo
       #   uses: actions/cache@v1
@@ -36,10 +36,10 @@ jobs:
       #     path: node_modules
       #     key: ${{runner.OS}}-${{hashFiles('**/package-lock.json')}}
 
-      # - name: 安装依赖
-      #   if: steps.cache.outputs.cache-hit != 'true'
-      #   run: |
-      #     npm install --save
+      - name: 安装依赖
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: |
+          npm install --save
 
       - name: 生成静态文件
         run: |
