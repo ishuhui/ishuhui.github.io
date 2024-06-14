@@ -1,58 +1,34 @@
-# 当有改动推送到master分支时，启动Action
-name: 自动部署
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - main #2020年10月后github新建仓库默认分支改为main，注意更改
-
-  release:
-    types:
-      - published
+      - main  # 推送到 main 分支时触发部署
 
 jobs:
-  checkout:
+  deploy:
     runs-on: ubuntu-latest
+
     steps:
-      # - name: 检查分支
-      #   uses: actions/checkout@v2
-      #   with:
-      #     ref: main #2020年10月后github新建仓库默认分支改为main，注意更改
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      - name: 安装 Node
-        uses: actions/setup-node
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: "14"
+          node-version: 'v16.20.2'  # 设置 Node.js 版本，根据你的项目需求进行调整
 
-      - name: 安装 Hexo
-        run: |
-          export TZ='Asia/Shanghai'
-          npm install hexo-cli -g
+      - name: Install dependencies
+        run: npm install  # 安装 Hexo 项目依赖
 
-      # - name: 缓存 Hexo
-      #   uses: actions/cache@v1
-      #   id: cache
-      #   with:
-      #     path: node_modules
-      #     key: ${{runner.OS}}-${{hashFiles('**/package-lock.json')}}
+      - name: Generate site
+        run: npm run generate  # 生成 Hexo 站点
 
-      - name: 安装依赖
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: |
-          npm install --save
-
-      - name: 生成静态文件
-        run: |
-          hexo clean
-          hexo generate
-
-      - name: 部署到github pages
-        run: |
-          git config --global user.name "ishuhui"
-          git config --global user.email "487559810@qq.com"
-          git clone https://github.com/ishuhui/ishuhi.github.io.git .deploy_git
-          # 此处务必用HTTPS链接。SSH链接可能有权限报错的隐患
-          # =====注意.deploy_git前面有个空格=====
-          # 这行指令的目的是clone博客静态文件仓库，防止Hexo推送时覆盖整个静态文件仓库，而是只推送有更改的文件
-          # 我注释掉了是为了刷新整个仓库，也可以选择不注释掉，但是可能出现没有识别到的情况
-          hexo deploy
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public  # Hexo 生成的静态文件存放目录
+          # publish_branch: gh-pages  # GitHub Pages 所使用的分支
+          force_orphan: true  # 清空原有的分支内容
+          allow_empty_commit: true  # 允许空提交，以触发 GitHub Pages 重新构建
