@@ -127,5 +127,5 @@ live2d:
 deploy:
   type: git
   repo: git@github.com:ishuhui/ishuhi.github.io.git
-  branch: hexo
+  branch: main
   
