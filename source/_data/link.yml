@@ -1,0 +1,8 @@
+class:
+  class_name: 友情链接
+  link_list: 
+    1:
+      name: likanghua
+      link: https://likanghua.gitee.io/
+      avatar: https://likanghua.gitee.io/image/avatar.jpg
+      descr: 李康华的博客
